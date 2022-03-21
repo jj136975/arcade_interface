@@ -47,7 +47,12 @@ namespace Arcade {
 ** \subsection enum_sect Enumerations
 ** We made our own Keyboard type:
 ** @see Keyboard
+** @TODO implement event handler
 ** 
+** \subsection union Unions
+** The pixelData union will facilitate creating pixels
+** see @pixelData
+**
 ** \section architecture_sec Architecture
 ** This is the sequence diagram of our architecture.
 ** \image html arcade_seq.png

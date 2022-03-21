@@ -34,6 +34,8 @@ project.
 -   IDisplayModule
 -   Time
 -   FpsLimiter
+-   Error
+-   GameObject
 
 Templates
 ------------------------------------
@@ -60,6 +62,13 @@ We made our own Keyboard type:
 
 See also
 :   Keyboard
+
+Unions
+-----------------------------------
+
+The pixelData union will facilitate creating pixels
+See also
+:   pixelData
 
 Architecture
 ==========================================
