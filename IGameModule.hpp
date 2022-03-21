@@ -44,11 +44,11 @@ namespace Arcade {
         ///< @return vector of pointers to game objects containing the mage data
         ///< @see GameObject
         virtual bool loadFile(const std::string &filepath) = 0; ///< Function to load a map from a filepath
-        ///< Function to load a map from a filepath
+        ///< Function to load a map | configuration filefrom a filepath
         ///< This function has been designed in order to facilitate the loading of game data through
         ///< files.
         ///< Those can be configuration files or just plain data.
-        ///< @param filepath : filepath to the map
+        ///< @param filepath : filepath to the map | configuration file
         ///< @return true if the map has been loaded succesfully
     };
 

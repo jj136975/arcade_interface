@@ -39,18 +39,28 @@ namespace Arcade {
         int y; ///< int value y
     };
 
+    /**
+     ** \struct Pixel
+     ** This structure contains pixel information
+     **/
     struct Pixel
     {
-        byte r;
-        byte g;
-        byte b;
-        char c;
+        unsigned char r; ///< red
+        unsigned char g; ///< green
+        unsigned char b; ///< blue
+        char c; ///< type or alpha
     };
 
-    union pixel_data
+    /**
+     ** \union pixelData
+     ** The union is provided to facilitate the pixel customization
+     ** Each member of the Pixel struct will be converted to
+     ** an unsigned int data
+     **/
+    union pixelData
     {
-        unsigned int data;
-        struct Pixel pixel;
+        unsigned int data; ///< converted data
+        struct Pixel pixel; ///< pixel data
     };
 
     /**
@@ -84,6 +94,8 @@ namespace Arcade {
         ///< the player's name on the screen. Its main purpose
         ///< is to display information with the use of fonts
         ///< @see IDisplayModule for more information about the fonts
+        unsigned int getPixelData(void) const; ///< function for getting the pixel data
+        ///< @return the pixelData member variable
 
         //setters
         void setPosition(const VectorXY &newPosition); ///< sets the coordinates of the GameObject at the desired position
@@ -100,6 +112,8 @@ namespace Arcade {
         ///< is to display information with the use of fonts
         ///< @param name : the objects new name
         ///< @see IDisplayModule for more information about the fonts
+        void setPixelData(unsigned int data); ///< sets the pixel data for the game object
+        ///< @param data : pixel data
 
         //operators
         GameObject &operator=(GameObject &gameObject); ///< copy operator
@@ -108,6 +122,7 @@ namespace Arcade {
     private:
         VectorXY position;
         char type;
+        unsigned int pixelData;
         std::string name;
     };
 

@@ -50,12 +50,21 @@ namespace Arcade {
         ///< The purpose of this function is to facilitate the transmission of the data from IDisplayModule to the Arcade class
         ///< @return vector containing all key information
         ///< @see Arcade
-        virtual void draw(const std::string> &map) const = 0;
+        virtual void draw(const std::string &map) const = 0;
+        ///< The draw function needs all the data coming from IGameModule in order to render it on the screen.
+        ///< The Arcade class is responsible for passing the data between the two classes.
+        ///< @param map : map of pixels to be drawn on the screen
         virtual void draw(const std::vector<GameObject *> &drawData) const = 0; ///< the draw function to render everything on screen
         ///< The draw function needs all the data coming from IGameModule in order to render it on the screen.
         ///< The Arcade class is responsible for passing the data between the two classes.
         ///< @param drawData : Contains x and y positions for drawing the object on the screen and its type so we
         ///< don't get confused between each object
+        ///< @see GameObject @see Arcade @see IGameModule
+        virtual void draw(const std::vector<GameObject *> &drawData, const std::string &map) const = 0; ///< the draw function to render everything on screen
+        ///< The draw function needs all the data coming from IGameModule in order to render it on the screen.
+        ///< The Arcade class is responsible for passing the data between the two classes.
+        ///< @param drawData : the game objects will have special attributes that we can handle
+        ///< @param map : map of pixels to be drawn on the screen
         ///< @see GameObject @see Arcade @see IGameModule
         virtual void setWindowSize(const VectorXY &size) = 0; ///< sets the window size for the renderer
         ///< The purpose of this function it to set all window sizes generically.

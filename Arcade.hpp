@@ -32,6 +32,8 @@ namespace Arcade {
 ** - IDisplayModule
 ** - Time
 ** - FpsLimiter
+** - GameObject
+** - Error
 **
 ** \subsection template_sect Templates
 ** We provided you with a template class who will load the libraries automatically for you.
