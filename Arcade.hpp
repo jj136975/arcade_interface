@@ -64,10 +64,24 @@ namespace Arcade {
 ** - Timesteps: https://www.gafferongames.com/post/fix_your_timestep/
 ** - Game dev:  http://gameprogrammingpatterns.com/contents.html
 **
+** \section Collaborators
+** This library is now public and we count on our classmates to refine some
+** things in order to make the engine usable for everyone.
+** - Matthieu Daumas (matthieu.daumas@epitech.eu)
+** - Loïc Deville (loic1.deville@epitech.eu)
+** - Antoine Van Gorp (antoine.van-gorp@epitech.eu)
+** - Jules Betrand (jules.bertrand@epitech.eu)
+** - Stepan Smirnov (stepan.smirnov@epitech.eu)
+** - Guillaume Janssens (guillaume.janssens@epitech.eu)
+** - Lucas Bollaert (lucas.bollaert@epitech.eu)
+** - Richard Joly (richard.joly@epitech.eu)
+** - Louis Hequet (louis.hequet@epitech.eu)
+**
 ** \section authors_sect Authors
 ** This article was written by:
-** @author Santana Graham
-** @author Vindevogel Victor
+** @author Santana Graham (graham.de-santana@epitech.eu)
+** @author Vindevogel Victor (victor.vindevogel@epitech.eu)
+**
 **/
 }
 
