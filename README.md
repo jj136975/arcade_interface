@@ -86,13 +86,28 @@ gave some ideas. Feel free to take a look.
 -   Timesteps: <https://www.gafferongames.com/post/fix_your_timestep/>
 -   Game dev: <http://gameprogrammingpatterns.com/contents.html>
 
+Collaborators
+======================================
+
+This library is now public and we count on our classmates to refine some
+things in order to make the engine usable for everyone.
+
+-   Matthieu Daumas (matthieu.daumas@epitech.eu)
+-   Loïc Deville (loic1.deville@epitech.eu)
+-   Antoine Van Gorp (antoine.van-gorp@epitech.eu)
+-   Jules Betrand (jules.bertrand@epitech.eu)
+-   Stepan Smirnov (stepan.smirnov@epitech.eu)
+-   Guillaume Janssens (guillaume.janssens@epitech.eu)
+-   Lucas Bollaert (lucas.bollaert@epitech.eu)
+-   Richard Joly (richard.joly@epitech.eu)
+-   Louis Hequet (louis.hequet@epitech.eu)
+
 Authors
 =================================
 
 This article was written by:
 
-Author
-:   Santana Graham
-:   Vindevogel Victor
+-   Santana Graham (graham.de-santana@epitech.eu)
+-   Vindevogel Victor (victor.vindevogel@epitech.eu)
 
 ------------------------------------------------------------------------
