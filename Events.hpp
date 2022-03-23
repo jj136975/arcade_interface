@@ -28,11 +28,13 @@ namespace Arcade
             WINDOW_RESIZE,
             WINDOW_CLOSE,
         };
+        
         struct KeyEvent
         {
-            Keys key;
+            Keyboard key;
             bool pressed;
         };
+        
         struct MouseEvent
         {
             VectorXY pos;
