@@ -116,6 +116,7 @@ namespace Arcade {
         Arcade(void);
         ~Arcade(void);
         void init(void); ///< Initialization
+        void start(void); ///< starts the gameloop
         void registerEvents(void); ///< Calls the eventHandler from the current IDisplayModule to log events
                                    ///< @see eventHandler
                                    ///< @see IDisplayModule
@@ -162,8 +163,6 @@ namespace Arcade {
         std::size_t displayIndex;
         Time timer;
         FpsLimiter fpsLimiter;
-        DLLoader<IGameModule> gameModuleLoader;
-        DLLoader<IDisplayModule> displayModuleLoader;
     };
 
 }

@@ -12,6 +12,7 @@
 
 #include "IDisplayModule.hpp"
 #include "GameObject.hpp"
+#include "GameObjectManager.hpp"
 
 namespace Arcade {
 
@@ -27,29 +28,16 @@ namespace Arcade {
     public:
         virtual ~IGameModule(void) = default; ///< default destructor
         virtual void init(void) = 0; ///< Class initialization
-        virtual void checkKeyState(const std::vector<Keyboard> &keys) = 0; ///< function for checking the state of each key
-        ///< We use the Keyboard enum to check if any data needs to be updated.
-        ///< The game data will be modified accordingly
-        ///< @param keys : array of Keyboard keys
-        ///< @see Keyboard for more information
-        virtual bool isQuitPressed(void) const = 0; ///< function whose only purpose is to check if the KEYEXIT has been pressed
-        ///< Function whose only purpose is to check if the KEYEXIT has been pressed
+        virtual void setEventManager(const Arcade::EventManager *eventManager) = 0;
+        virtual Arcade::GameObjectManager *getObjectManager(void) = 0;
+        //virtual void setGameObjectManager(const GameObjectManager *gameObjectManager) = 0;
+        virtual void start(void) = 0; ///< starts/stops the game
+        virtual void restart(void) = 0; ///< restarts the game
+        virtual void pause(void) = 0; ///< pauses the game, Matthieu is gay zebite
+        virtual void resume(void) = 0; ///< resumes the game
         ///< @return true if the KEYEXIT has been pressed
         ///< @see Keyboard for more information about the keys
-        virtual void updateGameObjects(void) = 0; ///< this function updates the game data if needed
-        ///< After checking the keys, the GameObjects will be modified accordingly
-        ///< @see GameObject
-        virtual const std::vector<GameObject *> &getGameObjects(void) const = 0; ///< returns a vector of GameObjects
-        ///< Function to get all game data
-        ///< @return vector of pointers to game objects containing the mage data
-        ///< @see GameObject
-        virtual bool loadFile(const std::string &filepath) = 0; ///< Function to load a map from a filepath
-        ///< Function to load a map | configuration filefrom a filepath
-        ///< This function has been designed in order to facilitate the loading of game data through
-        ///< files.
-        ///< Those can be configuration files or just plain data.
-        ///< @param filepath : filepath to the map | configuration file
-        ///< @return true if the map has been loaded succesfully
+        virtual void update(void) = 0; ///< this function updates the game data if needed
     };
 
 }

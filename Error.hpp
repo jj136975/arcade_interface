@@ -8,6 +8,9 @@
 #ifndef _ERROR_H_
 #define _ERROR_H_
 
+#include <exception>
+#include <string>
+
 namespace Arcade {
 
     /**
@@ -15,7 +18,7 @@ namespace Arcade {
      ** The purpose of this class is to make error management
      ** more clear. Just like we did in the paradigm pool.
      **/
-    class Error
+    class Error : public std::exception
     {
     public:
         Error(void); ///< default constructor
@@ -25,7 +28,7 @@ namespace Arcade {
         virtual ~Error(void); ///< destructor
         const char *what(void) const noexcept override; ///< function returning which error occured
         ///< @return c-style string containing the error description
-        const std::string where(void) const; ///< function returning where the error occured
+        const std::string &where(void) const; ///< function returning where the error occured
         ///< @return c-style string containing the error's location
     private:
         std::string errorMessage;

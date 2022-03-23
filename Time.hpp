@@ -8,6 +8,8 @@
 #ifndef _TIME_H_
 #define _TIME_H_
 
+#define INCREASE_TICK 0.01f
+
 namespace Arcade {
 
     class Time
