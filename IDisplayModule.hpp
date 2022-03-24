@@ -8,10 +8,9 @@
 #ifndef _IDISPLAYMODULE_H_
 #define _IDISPLAYMODULE_H_
 
+#include <map>
 #include <vector>
 
-#include "GameObjectManager.hpp"
-#include "GameObject.hpp"
 #include "EventManager.hpp"
 
 namespace Arcade {

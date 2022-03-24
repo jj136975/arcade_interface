@@ -8,6 +8,33 @@
 
 namespace Arcade
 {
+    /**
+     ** \struct VectorXY
+     ** This structure contains x and y member
+     ** to hold game object coordinates
+     ** You are provided with overloaded operators which are going to facilitate
+     ** certain comparisons.
+     */
+    struct VectorXY {
+        bool operator==(const VectorXY &vector) const; ///< == operator
+        ///< @param vector : other vector to compare with
+        bool operator!=(const VectorXY &vector) const; ///< != operator
+        ///< @param vector : other vector to compare with
+        bool operator+=(const VectorXY &vector) const; ///< += operator
+        ///< @param vector : other vector to add from
+        bool operator-=(const VectorXY &vector) const; ///< -= operator
+        ///< @param vector : other vector to substract from
+        bool operator+(const VectorXY &vector) const; ///< + operator
+        ///< @param vector : other vector to add from
+        bool operator-(const VectorXY &vector) const; ///< - operator
+        ///< @param vector : other vector to substract with
+        bool operator=(const VectorXY &vector) const; ///< = operator
+        ///< @param vector : other vector to copy from
+
+        int x; ///< int value x
+        int y; ///< int value y
+    };
+
     namespace Events
     {
         /*!

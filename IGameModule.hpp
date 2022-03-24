@@ -9,10 +9,9 @@
 #define _IGAMEMODULE_H_
 
 #include <string>
+#include <map>
 
 #include "IDisplayModule.hpp"
-#include "GameObject.hpp"
-#include "GameObjectManager.hpp"
 
 namespace Arcade {
 
