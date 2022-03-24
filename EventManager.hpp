@@ -27,8 +27,11 @@ namespace Arcade
         ///< @return the first event of the queue
         bool hasEvent(void); ///< checks if there are still events remaining in the queue
         void clearEvents(void); ///< removes all events from the events vector
+        bool hasQuite(void) const; ///< Check if a quite signal has been sent
+        void setQuite(bool status); ///< Set the quite status
     private:
         std::vector<Events::Event> events;
+        bool quitStatus;
     };
 
 }
