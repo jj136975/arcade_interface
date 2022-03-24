@@ -33,7 +33,7 @@ namespace Arcade {
         virtual char *getMap(void) const = 0;
         virtual bool isGameOver(void) const = 0;
         virtual int getScore(void) const = 0;
-        virtual std::map<char, struct Data> &getConfig(void);
+        virtual std::map<char, struct Data> &getConfig(void) = 0;
         virtual void restart(void) = 0; ///< restarts the game
         virtual void pause(void) = 0; ///< pauses the game
         ///< @return true if the KEYEXIT has been pressed
