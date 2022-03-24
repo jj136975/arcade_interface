@@ -10,6 +10,7 @@
 
 #include <map>
 #include <vector>
+#include <string>
 
 #include "EventManager.hpp"
 
@@ -37,6 +38,7 @@ namespace Arcade {
         virtual void display(char *map) const = 0;
         virtual void start(void) = 0;
         virtual void stop(void) = 0;
+        virtual const std::string &getName(void) const = 0;
         virtual void clear(void) = 0; ///< clears the screen
         ///< The draw function needs all the data coming from IGameModule in order to render it on the screen.
         ///< The Arcade class is responsible for passing the data between the two classes.
