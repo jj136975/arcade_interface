@@ -1,2 +1,9 @@
 *~
 update.sh
+Arcade.hpp
+DLLoader.hpp
+FpsLimiter.hpp
+GameObject.hpp
+GameObjectManager.hpp
+LibLoader.hpp
+Time.hpp

@@ -8,14 +8,19 @@
 #ifndef _IDISPLAYMODULE_H_
 #define _IDISPLAYMODULE_H_
 
+#include <map>
 #include <vector>
 
-#include "GameObjectManager.hpp"
-#include "GameObject.hpp"
 #include "EventManager.hpp"
 
 namespace Arcade {
 
+    struct Data	{
+	int color;
+	int backgroundColor;
+        char type;
+        void *texture;
+    };
     /*!
     ** \interface IDisplayModule
     ** This is an interface class containing pure virual functions.
@@ -27,10 +32,11 @@ namespace Arcade {
     {
     public:
         virtual ~IDisplayModule(void) = default; ///< default destructor
-        virtual void init(void) = 0; ///< init function
+        virtual void init(std::map<char, struct Data> &data) = 0; ///< init function
         virtual void setEventManager(const Arcade::EventManager *eventManager) = 0;
-        virtual void setGameObjectManager(const Arcade::GameObjectManager *gameObjectManager) = 0;
-        virtual void display(void) const = 0;
+        virtual void display(char *map) const = 0;
+        virtual void start(void) = 0;
+        virtual void stop(void) = 0;
         virtual void clear(void) = 0; ///< clears the screen
         ///< The draw function needs all the data coming from IGameModule in order to render it on the screen.
         ///< The Arcade class is responsible for passing the data between the two classes.
