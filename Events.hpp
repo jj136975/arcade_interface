@@ -5,6 +5,7 @@
 ** header file listing all events
 */
 
+#pragma once
 
 namespace Arcade
 {
