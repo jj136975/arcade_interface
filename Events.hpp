@@ -52,7 +52,7 @@ namespace Arcade
 
         enum EventType
         {
-            KEY_EVENT,
+            KEYBOARD_EVENT,
             MOUSE_EVENT,
             WINDOW_RESIZE,
             WINDOW_CLOSE,
