@@ -27,8 +27,8 @@ namespace Arcade {
     };
 
     struct Data	{
-	    Colors color;
-	    Colors backgroundColor;
+        Colors color;
+        Colors backgroundColor;
         char type;
         void *texture;
     };
