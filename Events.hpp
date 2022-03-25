@@ -21,15 +21,15 @@ namespace Arcade
         ///< @param vector : other vector to compare with
         bool operator!=(const VectorXY &vector) const; ///< != operator
         ///< @param vector : other vector to compare with
-        bool operator+=(const VectorXY &vector) const; ///< += operator
+        VectorXY &operator+=(const VectorXY &vector) const; ///< += operator
         ///< @param vector : other vector to add from
-        bool operator-=(const VectorXY &vector) const; ///< -= operator
+        VectorXY &operator-=(const VectorXY &vector) const; ///< -= operator
         ///< @param vector : other vector to substract from
-        bool operator+(const VectorXY &vector) const; ///< + operator
+        VectorXY &operator+(const VectorXY &vector) const; ///< + operator
         ///< @param vector : other vector to add from
-        bool operator-(const VectorXY &vector) const; ///< - operator
+        VectorXY &operator-(const VectorXY &vector) const; ///< - operator
         ///< @param vector : other vector to substract with
-        bool operator=(const VectorXY &vector) const; ///< = operator
+        VectorXY &operator=(const VectorXY &vector) const; ///< = operator
         ///< @param vector : other vector to copy from
 
         int x; ///< int value x
