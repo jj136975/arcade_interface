@@ -5,8 +5,7 @@
 ** header file for the IDisplayModule class
 */
 
-#ifndef _IDISPLAYMODULE_H_
-#define _IDISPLAYMODULE_H_
+#pragma once
 
 #include <map>
 #include <vector>
@@ -15,10 +14,21 @@
 #include "EventManager.hpp"
 
 namespace Arcade {
+    
+    enum Colors {
+        BLACK,
+        RED,
+        GREEN,
+        YELLOW,
+        BLUE,
+        MAGENTA,
+        CYAN,
+        WHITE
+    };
 
     struct Data	{
-	int color;
-	int backgroundColor;
+	    Colors color;
+	    Colors backgroundColor;
         char type;
         void *texture;
     };
@@ -33,8 +43,8 @@ namespace Arcade {
     {
     public:
         virtual ~IDisplayModule(void) = default; ///< default destructor
-        virtual void init(std::map<char, struct Data> &data) = 0; ///< init function
-        virtual void setEventManager(const Arcade::EventManager *eventManager) = 0;
+        virtual void init(std::map<char, struct Data> *data) = 0; ///< init function
+        virtual void setEventManager(Arcade::EventManager *eventManager) = 0;
         virtual void display(char *map) const = 0;
         virtual void start(void) = 0;
         virtual void stop(void) = 0;
@@ -52,5 +62,3 @@ namespace Arcade {
     };
 
 }
-
-#endif
