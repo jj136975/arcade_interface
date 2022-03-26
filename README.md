@@ -70,13 +70,6 @@ The pixelData union will facilitate creating pixels
 See also
 :   pixelData
 
-Architecture
-==========================================
-
-This is the sequence diagram of our architecture.
-
-![Sequence Diagram.](./doc/ressources/arcade_seq.png "Sequence Diagram")
-
 Ressources
 ======================================
 
