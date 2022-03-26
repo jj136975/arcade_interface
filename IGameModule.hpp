@@ -34,7 +34,7 @@ namespace Arcade {
         virtual void init(void) = 0; ///< Class initialization
         virtual void setEventManager(const Arcade::EventManager *eventManager) = 0;
         virtual void start(void) = 0; ///< starts/stops the game
-        virtual char *getMap(void) const = 0;
+        virtual const char *getMap(void) const = 0;
         virtual bool isGameOver(void) const = 0;
         virtual int getScore(void) const = 0;
         virtual std::map<char, struct Data> *getConfig(void) = 0;

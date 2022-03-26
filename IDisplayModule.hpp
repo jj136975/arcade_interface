@@ -45,7 +45,7 @@ namespace Arcade {
         virtual ~IDisplayModule(void) = default; ///< default destructor
         virtual void init(std::map<char, struct Data> *data) = 0; ///< init function
         virtual void setEventManager(Arcade::EventManager *eventManager) = 0;
-        virtual void display(char *map) = 0;
+        virtual void display(const char *map) = 0;
         virtual void start(void) = 0;
         virtual void stop(void) = 0;
         virtual const std::string &getName(void) const = 0;
