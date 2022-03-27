@@ -29,8 +29,6 @@ namespace Arcade
         ///< @param vector : other vector to add from
         VectorXY &operator-(const VectorXY &vector) const; ///< - operator
         ///< @param vector : other vector to substract with
-        VectorXY &operator=(const VectorXY &vector); ///< = operator
-        ///< @param vector : other vector to copy from
 
         int x; ///< int value x
         int y; ///< int value y
