@@ -46,6 +46,7 @@ namespace Arcade {
         ///< @return true if the KEYEXIT has been pressed
         ///< @see Keyboard for more information about the keys
         virtual void update(void) = 0; ///< this function updates the game data if needed
+        virtual const std::string &getName(void) const = 0;
     };
 
 }
