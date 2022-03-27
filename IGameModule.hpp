@@ -32,7 +32,7 @@ namespace Arcade {
     public:
         virtual ~IGameModule(void) = default; ///< default destructor
         virtual void init(void) = 0; ///< Class initialization
-        virtual void setEventManager(const Arcade::EventManager *eventManager) = 0;
+        virtual void setEventManager(Arcade::EventManager *eventManager) = 0;
         virtual void start(void) = 0; ///< starts/stops the game
         virtual const char *getMap(void) const = 0;
         virtual bool isGameOver(void) const = 0;
