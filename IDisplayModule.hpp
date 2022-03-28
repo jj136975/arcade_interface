@@ -32,6 +32,15 @@ namespace Arcade {
         char type;
         void *texture;
     };
+
+    struct TextData
+    {
+        std::string text;
+        VectorXY pos;
+        Colors txt;
+        Colors bg;
+    };
+
     /*!
     ** \interface IDisplayModule
     ** This is an interface class containing pure virual functions.
@@ -45,7 +54,7 @@ namespace Arcade {
         virtual ~IDisplayModule(void) = default; ///< default destructor
         virtual void init(std::map<char, struct Data> *data) = 0; ///< init function
         virtual void setEventManager(Arcade::EventManager *eventManager) = 0;
-        virtual void display(const char *map) = 0;
+        virtual void display(const char *map, const std::vector<TextData> *texts) = 0;
         virtual void start(void) = 0;
         virtual void stop(void) = 0;
         virtual const std::string &getName(void) const = 0;
