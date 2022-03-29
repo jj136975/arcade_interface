@@ -39,6 +39,7 @@ namespace Arcade {
         virtual bool isGameOver(void) const = 0;
         virtual int getScore(void) const = 0;
         virtual std::map<char, struct Data> *getConfig(void) = 0;
+        virtual const VectorXY &getWindowSize(void) const = 0;
         virtual void restart(void) = 0; ///< restarts the game
         virtual void pause(void) = 0; ///< pauses the game
         virtual bool isQuit(void) const = 0; ///< Check if a quite signal has been sent
