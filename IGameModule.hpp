@@ -38,7 +38,7 @@ namespace Arcade {
         virtual const std::vector<TextData> *getTexts(void) const = 0;
         virtual bool isGameOver(void) const = 0;
         virtual int getScore(void) const = 0;
-        virtual std::map<char, struct Data> *getConfig(void) = 0;
+        virtual const std::map<char, struct Data> *getConfig(void) const = 0;
         virtual const VectorXY &getWindowSize(void) const = 0;
         virtual void restart(void) = 0; ///< restarts the game
         virtual void pause(void) = 0; ///< pauses the game
@@ -47,7 +47,7 @@ namespace Arcade {
         virtual SwitchStatus getDisplaySwitch(void) const = 0; ///< get display switch status
         ///< @return true if the KEYEXIT has been pressed
         ///< @see Keyboard for more information about the keys
-        virtual void update(void) = 0; ///< this function updates the game data if needed
+        virtual void update(float deltaTime) = 0; ///< this function updates the game data if needed
         virtual const std::string &getName(void) const = 0;
     };
 
