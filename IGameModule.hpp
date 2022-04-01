@@ -49,6 +49,7 @@ namespace Arcade {
         ///< @see Keyboard for more information about the keys
         virtual void update(float deltaTime) = 0; ///< this function updates the game data if needed
         virtual const std::string &getName(void) const = 0;
+        virtual const std::string &getBackGround(void) const = 0;
     };
 
 }
