@@ -30,7 +30,7 @@ namespace Arcade {
         Colors color;
         Colors backgroundColor;
         char type;
-        void *texture;
+        std::string texture;
     };
 
     struct TextData
