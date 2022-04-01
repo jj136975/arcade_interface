@@ -39,6 +39,7 @@ namespace Arcade {
         VectorXY pos;
         Colors txt;
         Colors bg;
+        int id;
     };
 
     /*!
