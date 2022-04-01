@@ -26,11 +26,26 @@ namespace Arcade {
         WHITE
     };
 
+    struct Rect {
+        int x;
+        int y;
+        int width;
+        int height;
+    };
+
+    struct Sprite {
+        std::string filepath;
+        VectorXY pos; //position of the sprite
+        Rect rect; // just like the SFIntRect
+        int sprite_count; // if there is an animation
+        float delay; // delay if there is an animation
+    };
+    
     struct Data	{
         Colors color;
         Colors backgroundColor;
         char type;
-        std::string texture;
+        Sprite *sprite; //if sprite is NULL then there is no sprite to set
     };
 
     struct TextData
