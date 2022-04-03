@@ -77,13 +77,6 @@ namespace Arcade {
         virtual void clear(void) = 0; ///< clears the screen
         ///< The draw function needs all the data coming from IGameModule in order to render it on the screen.
         ///< The Arcade class is responsible for passing the data between the two classes.
-        virtual void setWindowSize(int x, int y) = 0;
-        virtual void setWindowSize(const VectorXY size) = 0; ///< sets the window size for the renderer
-        ///< The purpose of this function it to set all window sizes generically.
-        ///< Ideally, it should be used in the init function.
-        ///< Some renderers won't need this function
-        ///< @param size : the dimensions of the window, x representing its width and y representing its height
-        ///< @see VectorXY
     };
 
 }
