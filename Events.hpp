@@ -48,40 +48,36 @@ namespace Arcade
             UNKNOWN
         };
 
-        enum EventType
-        {
+        enum EventType {
             KEYBOARD_EVENT,
             MOUSE_EVENT,
             WINDOW_RESIZE,
             WINDOW_CLOSE,
         };
         
-        struct KeyEvent
-        {
+        struct KeyEvent {
             Keyboard key;
             bool pressed;
         };
         
-        struct MouseEvent
-        {
+        struct MouseEvent {
             VectorXY pos;
             bool pressed;
             bool isRightClick;
         };
-        struct WindowResize
-        {
+        
+        struct WindowResize {
             VectorXY prevSize;
             VectorXY size;
         };
-        struct WindowClose
-        {
+
+        struct WindowClose {
             bool close;
         };
-        struct Event
-        {
+
+        struct Event {
             EventType type;
-            union eventInfo
-            {
+            union eventInfo {
                 KeyEvent keyEvent;
                 MouseEvent mouseEvent;
                 WindowResize windowResize;
