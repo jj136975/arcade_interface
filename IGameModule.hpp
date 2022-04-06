@@ -45,8 +45,8 @@ namespace Arcade {
         virtual bool isQuit(void) const = 0; ///< Check if a quite signal has been sent
         virtual bool isRestartPressed(void) const = 0;
         virtual bool backToMenuPressed(void) const = 0;
-        virtual SwitchStatus getGameSwitch(void) const = 0; ///< get game switch status
-        virtual SwitchStatus getDisplaySwitch(void) const = 0; ///< get display switch status
+        virtual SwitchStatus getGameSwitch(void) = 0; ///< get game switch status
+        virtual SwitchStatus getDisplaySwitch(void) = 0; ///< get display switch status
         ///< @return true if the KEYEXIT has been pressed
         ///< @see Keyboard for more information about the keys
         virtual void update(float deltaTime) = 0; ///< this function updates the game data if needed
